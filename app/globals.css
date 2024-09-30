@@ -4,24 +4,208 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c1c1c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1c1c1c;
     --foreground: #ededed;
   }
 }
 
 body {
+  cursor: none;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-neue-montreal), sans-serif;
+}
+
+h1,
+h1 span:not(p) {
+  font-family: var(--font-syncopate-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.light {
+  font-family: var(--font-syncopate-regular), sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+:not(p) > span {
+  font-family: var(--font-syncopate-bold), sans-serif;
+  letter-spacing: 1px;
+}
+
+p > span {
+  font-weight: 800;
+}
+
+.show {
+  opacity: 0;
+  transform: translateY(150%);
+  overflow: hidden;
+  transform-origin: center top;
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+html.has-scroll-smooth {
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.head-underline {
+  position: relative;
+}
+
+.head-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  height: 2px;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.head-underline:hover::after {
+  width: 100%;
+}
+
+.slick-track {
+  display: flex!important;
+  gap: 10px!important;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Base styles for cursor components */
+/* Base styles for cursor components */
+.cursor-outer,
+.cursor-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 10000;
+}
+
+/* Outer circle */
+.cursor-outer {
+  width: 30px; /* Reduced from 40px to 30px */
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion with bezier curve */
+}
+
+/* Inner dot */
+.cursor-inner {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1); /* Faster follow delay */
+}
+
+.invert-colors {
+  border-color: white !important;
+  background-color: white !important;
+}
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }

@@ -2,11 +2,11 @@ const Navbar = () => {
   return (
     <div
       data-scroll-section
-      className="rounded-full px-8 py-8 w-full text-white font-bold flex justify-between items-center absolute z-50"
+      className="px-8 py-8 w-full text-white font-bold flex justify-between items-center z-50 absolute top-0"
       id="navbar"
     >
       <div
-        className="flex-1 show"
+        className="flex-1"
         data-scroll
         data-scroll-direction="horizontal"
         data-scroll-position="top"
@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className="flex-1 flex justify-end show"
+        className="flex-1 flex justify-end"
         data-scroll
         data-scroll-direction="horizontal"
         data-scroll-position="top"
@@ -33,6 +33,12 @@ const Navbar = () => {
               </li>
               <li>
                 <a href="#about" data-scroll-to>About</a>
+              </li>
+              <li>
+                <a href="#education" data-scroll-to>Education</a>
+              </li>
+              <li>
+                <a href="#experience" data-scroll-to>Experience</a>
               </li>
               <li>
                 <a href="#contact" data-scroll-to>Contact</a>

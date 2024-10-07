@@ -3,15 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #1c1c1c;
+  --background: #1c1c1c;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1c1c1c;
-    --foreground: #ededed;
-  }
+.font-neue {
+  font-family: var(--font-neue-montreal), sans-serif;
 }
 
 body {
@@ -61,6 +58,10 @@ html.has-scroll-smooth {
   }
 }
 
+.swiper-wrapper {
+  transition-timing-function: linear!important;
+}
+
 .head-underline {
   position: relative;
 }
@@ -80,10 +81,10 @@ html.has-scroll-smooth {
   width: 100%;
 }
 
-.slick-track {
-  display: flex!important;
-  gap: 10px!important;
-}
+/* #contact [data-scroll-container] {
+  min-height: unset!important;
+  height: min-content!important;
+} */
 
 @layer utilities {
   .text-balance {

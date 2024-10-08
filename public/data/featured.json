@@ -1,0 +1,30 @@
+[
+  {
+    "src": "/images/anker/anker-featured.png",
+    "alt": "Anker Homepage",
+    "title": "Anker",
+    "description": "Frontend Developer",
+    "href": "#"
+  },
+  {
+    "src": "/images/sight/sight-featured.png",
+    "alt": "Sight OCMS",
+    "title": "Sight",
+    "description": "Full-Stack Developer",
+    "href": "#"
+  },
+  {
+    "src": "/images/trmsweb/trmsweb-1.png",
+    "alt": "Pasig TRMS Web App",
+    "title": "Pasig TRMS",
+    "description": "Full-Stack Developer",
+    "href": "#"
+  },
+  {
+    "src": "/images/apollo/apollo-1.png",
+    "alt": "Apollo Online Library",
+    "title": "Apollo",
+    "description": "Designer + Full-Stack Developer",
+    "href": "#"
+  }
+]

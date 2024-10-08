@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      data-scroll
+      data-scroll-section
       className="px-8 py-8 w-full text-white font-bold flex justify-between items-center"
     >
       <div
@@ -18,40 +18,28 @@ const Footer = () => {
             <a href="#home">KD○</a>
           </div>
           <ul className="flex gap-5 w-max">
-            <li>
-              <a href="#home" data-scroll-to>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#projects" data-scroll-to>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#about" data-scroll-to>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#education" data-scroll-to>
-                Education
-              </a>
-            </li>
-            <li>
-              <a href="#experience" data-scroll-to>
-                Experience
-              </a>
-            </li>
-            <li>
-              <a href="#contact" data-scroll-to>
-                Contact
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a href="#home" className="head-underline" data-scroll-to>Home</a>
+              </li>
+              <li>
+                <a href="#projects" className="head-underline" data-scroll-to>Projects</a>
+              </li>
+              <li>
+                <a href="#about" className="head-underline" data-scroll-to>About</a>
+              </li>
+              <li>
+                <a href="#education" className="head-underline" data-scroll-to>Education</a>
+              </li>
+              <li>
+                <a href="#experience" className="head-underline" data-scroll-to>Experience</a>
+              </li>
+              <li>
+                <a href="#contact" className="head-underline" data-scroll-to>Contact</a>
+              </li>
+            </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-        <span className="font-neue block text-sm text-white sm:text-center">
+        <span className="font-neue font-normal block text-sm text-white sm:text-center">
           © 2024{" "}
           <a href="" className="head-underline">
             Kenneth Docot

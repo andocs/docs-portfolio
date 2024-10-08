@@ -75,6 +75,14 @@ const CustomCursor = () => {
       span.addEventListener('mouseup', handleSpanMouseUp);
     });
 
+    const anchors = document.querySelectorAll('a');
+    anchors.forEach((anchor) => {
+      anchor.addEventListener('mouseover', handleMouseOverSpan);
+      anchor.addEventListener('mouseout', handleMouseOutSpan);
+      anchor.addEventListener('mousedown', handleSpanMouseDown);
+      anchor.addEventListener('mouseup', handleSpanMouseUp);
+    });
+
     // Animation loop for smooth cursor movement
     function animateCursor() {
       // Gradually move the outer circle towards the target position

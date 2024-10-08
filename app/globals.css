@@ -76,15 +76,13 @@ html.has-scroll-smooth {
   height: 2px;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+#contact [data-scroll-container] {
+  min-height: unset;
+}
 
 .head-underline:hover::after {
   width: 100%;
 }
-
-/* #contact [data-scroll-container] {
-  min-height: unset!important;
-  height: min-content!important;
-} */
 
 @layer utilities {
   .text-balance {

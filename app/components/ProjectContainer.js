@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
+import { FaArrowRight } from "react-icons/fa";
 
-const ProjectContainer = ({ href, imageSrc, title, description }) => {
+const ProjectContainer = ({ href, imageSrc, title, description, isDisplay }) => {
+  const Wrapper = href ? 'a' : 'div';
+
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden shadow-md">
+    <Wrapper
+      href={href ? href : undefined} 
+      target={href ? "_blank" : undefined} 
+      rel={href ? "noopener noreferrer" : undefined} 
+      className="group block border border-gray-700 traansition-all duration-500 rounded-lg overflow-hidden shadow-md bg-stone-900 hover:shadow-[0_4px_15px_0_#412F84]"
+    >
       <div className="p-2 flex items-center">
         <div className="flex gap-1">
           <span className="w-3 h-3 rounded-full bg-red-500"></span>
@@ -11,33 +20,34 @@ const ProjectContainer = ({ href, imageSrc, title, description }) => {
           <span className="w-3 h-3 rounded-full bg-green-500"></span>
         </div>
       </div>
-      <a 
-        href={href} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="block"
-      >
-        <img 
+      <div className={`${!isDisplay ? "h-[400px]" : "h-[250px]"} block w-full overflow-hidden`}>
+        <Image
+          height={2000} 
+          width={2000} 
           src={imageSrc} 
           alt={title} 
-          className="w-full h-auto block transition-transform duration-300 hover:scale-105" 
+          className="w-full h-full block object-cover object-top transition-transform duration-300 hover:scale-105" 
         />
-      </a>
+      </div>
       {(title || description) && (
-        <div className="p-4 text-center">
-          {title && <h3 className="m-0 text-lg font-bold">{title}</h3>}
-          {description && <p className="mt-2 text-gray-600 text-base">{description}</p>}
+        <div className="p-4 text-start flex justify-between items-center">
+          <div>
+            {title && <h3 className="m-0 text-xl"><span className="font-neue font-bold tracking-normal">{title}</span></h3>}
+            {description && <p className="text-gray-400 text-base">{description}</p>}
+          </div>
+          <FaArrowRight className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0"/>
         </div>
       )}
-    </div>
+    </Wrapper>
   );
 };
 
 ProjectContainer.propTypes = {
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
+  isDisplay: PropTypes.bool
 };
 
 export default ProjectContainer;

@@ -1,0 +1,168 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Anker",
+      "description": "Anker is a project where I worked as a Frontend Developer, responsible for creating a responsive and optimized homepage.",
+      "roles": [
+        {
+          "title": "Frontend Developer",
+          "entails": "Developed the landing page, optimized performance, and ensured cross-browser compatibility."
+        }
+      ],
+      "categories": ["Web Development", "Frontend"],
+      "tech_stack": ["HTML", "CSS", "JavaScript", "React", "TailwindCSS"],
+      "duration": "3 months",
+      "site": {
+        "has_site": true,
+        "link": "https://anker.com"
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": false,
+        "link": null
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/anker/anker-featured.png",
+          "alt": "Anker Homepage"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sight",
+      "description": "Sight is an OCMS system where I contributed as a Full-Stack Developer, handling both frontend and backend tasks.",
+      "roles": [
+        {
+          "title": "Full-Stack Developer",
+          "entails": "Developed the OCMS system, including the user interface and backend API integration."
+        }
+      ],
+      "categories": ["Web Development", "Full-Stack"],
+      "tech_stack": ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
+      "duration": "5 months",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/username/sight-ocms"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/file/sight-project"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Ongoing",
+      "images": [
+        {
+          "src": "/images/sight/sight-featured.png",
+          "alt": "Sight OCMS"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pasig TRMS",
+      "description": "Pasig TRMS is a traffic regulation system where I worked on both frontend and backend as a Full-Stack Developer.",
+      "roles": [
+        {
+          "title": "Full-Stack Developer",
+          "entails": "Designed and developed the web application for traffic management and report generation."
+        }
+      ],
+      "categories": ["Web Development", "Full-Stack", "Government"],
+      "tech_stack": ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+      "duration": "4 months",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/username/trms-web"
+      },
+      "figma_uizard": {
+        "has_project": false,
+        "link": null
+      },
+      "paper": {
+        "has_paper": true,
+        "link": "https://example.com/pasig-trms-paper"
+      },
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/trmsweb/trmsweb-1.png",
+          "alt": "Pasig TRMS Web App"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Apollo",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer + Full-Stack Developer",
+          "entails": "Designed the UI/UX and developed the backend architecture for the online library system."
+        }
+      ],
+      "categories": ["Web Development", "Design", "Full-Stack"],
+      "tech_stack": ["React", "Node.js", "MongoDB", "Figma"],
+      "duration": "June 2019 - February 2020",
+      "site": {
+        "has_site": true,
+        "link": "https://apollo-library.com"
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/username/apollo-library"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/file/apollo-library-project"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/apollo/apollo-featured.png",
+          "alt": "Apollo Online Library"
+        },
+        {
+          "src": "/images/apollo/apollo-1.png",
+          "alt": "Apollo Online Library"
+        },
+        {
+          "src": "/images/apollo/apollo-2.png",
+          "alt": "Apollo Online Library"
+        },
+        {
+          "src": "/images/apollo/apollo-3.png",
+          "alt": "Apollo Online Library"
+        },
+        {
+          "src": "/images/apollo/apollo-4.png",
+          "alt": "Apollo Online Library"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "src": "/images/anker/anker-featured.png",
+    "alt": "Anker Homepage",
+    "title": "Anker",
+    "description": "Frontend Developer",
+    "href": "/projects/anker"
+  },
+  {
+    "src": "/images/sight/sight-featured.png",
+    "alt": "Sight OCMS",
+    "title": "Sight",
+    "description": "Full-Stack Developer",
+    "href": "/projects/sight"
+  },
+  {
+    "src": "/images/trmsweb/trmsweb-1.png",
+    "alt": "Pasig TRMS Web App",
+    "title": "Pasig TRMS Web App",
+    "description": "Full-Stack Developer",
+    "href": "/projects/trmsweb"
+  },
+  {
+    "src": "/images/trmsmobile/trmsmobile-featured.jpg",
+    "alt": "Pasig TRMS Mobile App",
+    "title": "Pasig TRMS Mobile App",
+    "description": "Designer + Mobile Developer",
+    "href": "/projects/trmsmobile"
+  },
+  {
+    "src": "/images/assy/assy-featured.png",
+    "alt": "Assy Portfolio",
+    "title": "Assy Portfolio",
+    "description": "Frontend Developer",
+    "href": "/projects/assy"
+  },
+  {
+    "src": "/images/takefive/takefive-featured.jpg",
+    "alt": "TakeFive Mobile App",
+    "title": "TakeFive",
+    "description": "Designer + Mobile Developer",
+    "href": "/projects/takefive"
+  },
+  {
+    "src": "/images/commutr/commutr-featured.png",
+    "alt": "commutr Mobile App",
+    "title": "commutr.",
+    "description": "Designer + Mobile Developer",
+    "href": "/projects/commutr"
+  },
+  {
+    "src": "/images/medpal/medpal-featured.png",
+    "alt": "MedPal Mobile App",
+    "title": "MedPal",
+    "description": "Designer",
+    "href": "/projects/medpal"
+  },
+  {
+    "src": "/images/traverse/traverse-featured.png",
+    "alt": "Traverse Mobile App",
+    "title": "Traverse",
+    "description": "Designer",
+    "href": "/projects/traverse"
+  },
+  {
+    "src": "/images/apollo/apollo-1.png",
+    "alt": "Apollo Online Library",
+    "title": "Apollo",
+    "description": "Designer + Full-Stack Developer",
+    "href": "#"
+  }
+]

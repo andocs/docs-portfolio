@@ -2,20 +2,24 @@
   "projects": [
     {
       "id": 1,
+      "page": "anker",
       "name": "Anker",
       "description": "Anker is a project where I worked as a Frontend Developer, responsible for creating a responsive and optimized homepage.",
       "roles": [
         {
-          "title": "Frontend Developer",
-          "entails": "Developed the landing page, optimized performance, and ensured cross-browser compatibility."
+          "title": "Frontend Developer"
         }
       ],
-      "categories": ["Web Development", "Frontend"],
-      "tech_stack": ["HTML", "CSS", "JavaScript", "React", "TailwindCSS"],
-      "duration": "3 months",
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "SiShopify", "name": "Shopify" }
+      ],
+      "duration": "May 2024 - June 2024",
       "site": {
         "has_site": true,
-        "link": "https://anker.com"
+        "link": "https://anker.ph"
       },
       "github_repo": {
         "has_repo": false,
@@ -34,74 +38,152 @@
         {
           "src": "/images/anker/anker-featured.png",
           "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-1.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-2.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-3.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-4.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-5.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-6.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-7.png",
+          "alt": "Anker Homepage"
+        },
+        {
+          "src": "/images/anker/anker-8.png",
+          "alt": "Anker Homepage"
         }
       ]
     },
     {
       "id": 2,
+      "page": "sight",
       "name": "Sight",
       "description": "Sight is an OCMS system where I contributed as a Full-Stack Developer, handling both frontend and backend tasks.",
       "roles": [
         {
-          "title": "Full-Stack Developer",
-          "entails": "Developed the OCMS system, including the user interface and backend API integration."
+          "title": "Full-Stack Developer"
         }
       ],
-      "categories": ["Web Development", "Full-Stack"],
-      "tech_stack": ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
-      "duration": "5 months",
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "SiTailwindcss", "name": "Tailwind" },
+        { "icon": "FaReact", "name": "React" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "SiMongodb", "name": "MongoDB" },
+        { "icon": "SiExpress", "name": "Express" },
+        { "icon": "FaReact", "name": "React" },
+        { "icon": "FaNodeJs", "name": "Node.js" }
+      ],
+      "duration": "March 2023 - December 2023",
       "site": {
-        "has_site": false,
-        "link": null
+        "has_site": true,
+        "link": "https://sight-ocms.vercel.app/"
       },
       "github_repo": {
         "has_repo": true,
-        "link": "https://github.com/username/sight-ocms"
+        "link": "https://github.com/andocs/sight-ocms"
       },
       "figma_uizard": {
         "has_project": true,
-        "link": "https://www.figma.com/file/sight-project"
+        "link": "https://www.figma.com/proto/ubohSJTaMRwAh5QmzfYBns/OPTICAL-CLINIC--MANAGEMENT-SYSTEM-revised-(Copy)?node-id=0-1&t=ntExcW7nzvsn45Vn-1"
       },
       "paper": {
         "has_paper": false,
         "link": null
       },
-      "status": "Ongoing",
+      "status": "Completed",
       "images": [
         {
           "src": "/images/sight/sight-featured.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-1.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-2.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-3.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-4.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-5.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-6.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-7.png",
+          "alt": "Sight OCMS"
+        },
+        {
+          "src": "/images/sight/sight-8.png",
           "alt": "Sight OCMS"
         }
       ]
     },
     {
       "id": 3,
-      "name": "Pasig TRMS",
+      "page": "trmsweb",
+      "name": "TRMS Web",
       "description": "Pasig TRMS is a traffic regulation system where I worked on both frontend and backend as a Full-Stack Developer.",
       "roles": [
         {
-          "title": "Full-Stack Developer",
-          "entails": "Designed and developed the web application for traffic management and report generation."
+          "title": "Full-Stack Developer"
         }
       ],
-      "categories": ["Web Development", "Full-Stack", "Government"],
-      "tech_stack": ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-      "duration": "4 months",
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "FaPhp", "name": "PHP" },
+        { "icon": "SiMysql", "name": "MySQL" }
+      ],
+      "duration": "July 2024 - September 2024",
       "site": {
-        "has_site": false,
-        "link": null
+        "has_site": true,
+        "link": "https://pasigtrms.great-site.net/"
       },
       "github_repo": {
         "has_repo": true,
-        "link": "https://github.com/username/trms-web"
+        "link": "https://github.com/andocs/pasigtrms"
       },
       "figma_uizard": {
-        "has_project": false,
-        "link": null
+        "has_project": true,
+        "link": "https://www.figma.com/proto/WkzC3xeQORbiB6KVT6Bdpq/TRMS?node-id=0-1&t=GUGc6xxmpwsBlYSk-1"
       },
       "paper": {
-        "has_paper": true,
-        "link": "https://example.com/pasig-trms-paper"
+        "has_paper": false,
+        "link": null
       },
       "status": "Completed",
       "images": [
@@ -113,6 +195,7 @@
     },
     {
       "id": 4,
+      "page": "apollo",
       "name": "Apollo",
       "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
       "roles": [
@@ -125,25 +208,23 @@
       ],
       "categories": ["Web Development", "Design", "Full-Stack"],
       "tech_stack": [
-        { "icon": "FaHtml5", "name": "HTML5" },
-        { "icon": "FaCss3Alt", "name": "CSS3" },
-        { "icon": "FaReact", "name": "React" }
+        { "icon": "SiVisualbasic", "name": "VB.NET" }
       ],
       "duration": "June 2019 - February 2020",
       "site": {
-        "has_site": true,
-        "link": "https://apollo-library.com"
+        "has_site": false,
+        "link": null
       },
       "github_repo": {
-        "has_repo": true,
-        "link": "https://github.com/username/apollo-library"
+        "has_repo": false,
+        "link": null
       },
       "figma_uizard": {
-        "has_project": true,
-        "link": "https://www.figma.com/file/apollo-library-project"
+        "has_project": false,
+        "link": null
       },
       "paper": {
-        "has_paper": true,
+        "has_paper": false,
         "link": null
       },
       "status": "Completed",
@@ -167,6 +248,452 @@
         {
           "src": "/images/apollo/apollo-4.png",
           "alt": "Apollo Online Library"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "page": "assy",
+      "name": "Assy Portfolio",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Frontend Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "SiTailwindcss", "name": "Tailwind" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "FaReact", "name": "React" },
+        { "icon": "SiNextdotjs", "name": "Next.js" }
+      ],
+      "duration": "April 2024 - May 2024",
+      "site": {
+        "has_site": true,
+        "link": "https://assy-portfolio.vercel.app/"
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/andocs/assy-portfolio"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/proto/JRfFTlTrA7TKxk7LRpPmNg/Team-Portolio?node-id=194-2&t=HmNtfjFcBqyZ92ds-1"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/assy/assy-featured.png",
+          "alt": "Assy Portfolio"
+        },
+        {
+          "src": "/images/assy/assy-1.png",
+          "alt": "Assy Portfolio"
+        },
+        {
+          "src": "/images/assy/assy-2.png",
+          "alt": "Assy Portfolio"
+        },
+        {
+          "src": "/images/assy/assy-3.png",
+          "alt": "Assy Portfolio"
+        },
+        {
+          "src": "/images/assy/assy-4.png",
+          "alt": "Assy Portfolio"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "page": "commutr",
+      "name": "commutr.",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer"
+        },
+        {
+          "title": "Frontend Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "FaAngular", "name": "Angular" },
+        { "icon": "SiIonic", "name": "Ionic" }
+      ],
+      "duration": "December 2022 - February 2023",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://app.uizard.io/p/9afa3bc1"
+      },
+      "paper": {
+        "has_paper": true,
+        "link": "/files/COMMUTR_TECHPAPER.docx"
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/commutr/commutr-featured.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-1.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-2.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-3.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-4.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-5.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-6.png",
+          "alt": "commutr Mobile App"
+        },
+        {
+          "src": "/images/commutr/commutr-7.png",
+          "alt": "commutr Mobile App"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "page": "medpal",
+      "name": "MedPal",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaFigma", "name": "Figma" }
+      ],
+      "duration": "April 2021 - May 2021",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": false,
+        "link": null
+      },
+      "paper": {
+        "has_paper": true,
+        "link": "/files/WANSCOMPANY_BUSINESSPLAN.pdf"
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/medpal/medpal-featured.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-1.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-2.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-3.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-4.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-5.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-6.png",
+          "alt": "MedPal Mobile App"
+        },
+        {
+          "src": "/images/medpal/medpal-7.png",
+          "alt": "MedPal Mobile App"
+        }        
+      ]
+    },
+    {
+      "id": 8,
+      "page": "takefive",
+      "name": "TakeFive",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer"
+        },
+        {
+          "title": "Mobile Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaJava", "name": "Java" },
+        { "icon": "SiAndroidstudio", "name": "Android Studio" }
+      ],
+      "duration": "December 2022 - January 2023",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": false,
+        "link": null
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/takefive/takefive-featured.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-1.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-2.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-3.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-4.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-5.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-6.jpg",
+          "alt": "TakeFive Mobile App"
+        },
+        {
+          "src": "/images/takefive/takefive-7.jpg",
+          "alt": "TakeFive Mobile App"
+        }              
+      ]
+    },
+    {
+      "id": 9,
+      "page": "traverse",
+      "name": "Traverse",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaFigma", "name": "Figma" }
+      ],
+      "duration": "October 2022 - November 2022",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://app.uizard.io/p/QXMtEcm-4"
+      },
+      "paper": {
+        "has_paper": true,
+        "link": "/files/TRAVERSE_DOCOT.pdf"
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/traverse/traverse-featured.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-1.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-2.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-3.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-4.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-5.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-6.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-7.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-8.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-9.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-10.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-11.png",
+          "alt": "Traverse Mobile App"
+        },
+        {
+          "src": "/images/traverse/traverse-12.png",
+          "alt": "Traverse Mobile App"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "page": "trmsmobile",
+      "name": "TRMS Mobile",
+      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "roles": [
+        {
+          "title": "Designer"
+        },
+        {
+          "title": "Mobile Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaFigma", "name": "Figma" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "TbBrandReactNative", "name": "React Native" }
+      ],
+      "duration": "July 2024 - September 2024",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/andocs/PasigTRMSMobileApp"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/proto/Kj0qVip6H8VYWgSA8Jo6Wh/Pasig-TRMS-Mobile-App?node-id=14-3143&t=hCxqWDLj2Ze0GRjy-1"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/trmsmobile/trmsmobile-featured.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-1.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-2.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-3.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-4.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-5.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-6.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-7.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-8.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-9.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-10.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },  
+        {
+          "src": "/images/trmsmobile/trmsmobile-11.jpg",
+          "alt": "Pasig TRMS Mobile App"
         }
       ]
     }

@@ -10,8 +10,10 @@ import {
   FaAngular,
   FaPython,
   FaJava,
+  FaJs,
   FaGitAlt,
   FaGithub,
+  FaFigma
 } from "react-icons/fa";
 import {
   SiMysql,
@@ -28,12 +30,17 @@ import {
   SiTrello,
   SiJira,
   SiAzuredevops,
+  SiTailwindcss,
 } from "react-icons/si";
 
+import { TbBrandReactNative } from "react-icons/tb";
 const Marquee = () => {
     const techStack = [
+      
         { icon: <FaHtml5 className="transition-colors duration-300 group-hover/span:text-[#E34F26]" />, name: "HTML5", color: "#E34F26" },
         { icon: <FaCss3Alt className="transition-colors duration-300 group-hover/span:text-[#1572B6]" />, name: "CSS3", color: "#1572B6" },
+        { icon: <SiTailwindcss className="transition-colors duration-300 group-hover/span:text-[#38bdf8]" />, name: "Tailwind", color: "#38bdf8" },
+        { icon: <FaFigma className="transition-colors duration-300 group-hover/span:text-[#a259ff]" />, name: "Figma", color: "#a259ff" },
         {
           icon: <FaBootstrap className="transition-colors duration-300 group-hover/span:text-[#7952B3]" />,
           name: "Bootstrap", color: "#7952B3",
@@ -49,6 +56,7 @@ const Marquee = () => {
         { icon: <SiMongodb className="transition-colors duration-300 group-hover/span:text-[#47A248]" />, name: "MongoDB", color: "#47A248" },
         { icon: <SiExpress className="transition-colors duration-300 group-hover/span:text-[#000000]" />, name: "Express", color: "#000000" },
         { icon: <FaReact className="transition-colors duration-300 group-hover/span:text-[#61DAFB]" />, name: "React", color: "#61DAFB" },
+        { icon: <TbBrandReactNative className="transition-colors duration-300 group-hover/span:text-[#61DAFB]" />, name: "React Native", color: "#61DAFB" },
         { icon: <FaAngular className="transition-colors duration-300 group-hover/span:text-[#DD0031]" />, name: "Angular", color: "#DD0031" },
         { icon: <SiNextdotjs className="transition-colors duration-300 group-hover/span:text-[#000000]" />, name: "Next.js", color: "#000000" },
         {
@@ -58,6 +66,7 @@ const Marquee = () => {
         { icon: <SiIonic className="transition-colors duration-300 group-hover/span:text-[#3880FF]" />, name: "Ionic", color: "#3880FF" },
         { icon: <FaPython className="transition-colors duration-300 group-hover/span:text-[#3776AB]" />, name: "Python", color: "#3776AB" },
         { icon: <FaJava className="transition-colors duration-300 group-hover/span:text-[#007396]" />, name: "Java", color: "#007396" },
+        { icon: <FaJs className="transition-colors duration-300 group-hover/span:text-[#F0DB4F]" />, name: "JavaScript", color: "#F0DB4F" },
         {
           icon: <SiVisualbasic className="transition-colors duration-300 group-hover/span:text-[#5C2D91]" />,
           name: "VB.Net", color: "#5C2D91",

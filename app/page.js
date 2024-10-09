@@ -13,6 +13,7 @@ import {
   FaGithub,
   FaSpotify,
   FaBriefcase,
+  FaArrowRight
 } from "react-icons/fa";
 import { IoSchool } from "react-icons/io5";
 import { RiDownloadLine, RiVerifiedBadgeFill } from "react-icons/ri";
@@ -127,7 +128,7 @@ const Home = () => {
           className="flex flex-col py-24"
         >
           <div data-scroll className="container mx-auto px-6">
-            <div className="flex flex-col gap-24">
+            <div className="flex flex-col gap-24 items-center">
               <h1 className="text-center text-3xl">
                 <span>Featured Projects</span>
               </h1>
@@ -142,6 +143,16 @@ const Home = () => {
                   />
                 ))}
               </div>
+              <a
+                href="/projects"
+                className="group relative overflow-hidden p-[1px] transition-all duration-700 rounded-lg hover:shadow-[0_4px_15px_0_#412F84]"
+              >
+                <div className="absolute inset-[-1000%] duration-700 transition-all animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <div className="h-full w-full px-4 py-2 flex gap-1 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
+                  View All
+                  <FaArrowRight className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                </div>
+              </a>
             </div>
           </div>
         </section>

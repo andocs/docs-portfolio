@@ -7,30 +7,34 @@ const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 const RECENTLY_PLAYED_ENDPOINT =
   "https://api.spotify.com/v1/me/player/recently-played?limit=1";
 
-const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basicAuth}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      grant_type: "refresh_token",
-      refresh_token: refreshToken,
-    }),
-  });
-
-  // Log response for debugging
-  const responseText = await response.text();
-
-  if (!response.ok) {
-    throw new Error(
-      `Failed to get access token: ${response.status} ${response.statusText}`
-    );
-  }
-
-  return JSON.parse(responseText);
-};
+  const getAccessToken = async () => {
+    const response = await fetch(TOKEN_ENDPOINT, {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basicAuth}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        grant_type: "refresh_token",
+        refresh_token: refreshToken,
+      }),
+    });
+  
+    const responseText = await response.text();
+  
+    if (!response.ok) {
+      console.error(
+        `Failed to get access token: ${response.status} ${response.statusText}`,
+        responseText
+      );
+      throw new Error(
+        `Failed to get access token: ${response.status} ${response.statusText}`
+      );
+    }
+  
+    return JSON.parse(responseText);
+  };
+  
 
 export const getLastPlayedTrack = async () => {
   try {

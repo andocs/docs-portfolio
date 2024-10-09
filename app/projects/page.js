@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 import ProjectContainer from "../components/ProjectContainer";
 
-import featured from "../../public/data/featured.json";
+import list from "../../public/data/projectlist.json";
 
 const Projects = () => {
-  const [featuredProjects, setFeaturedProjects] = useState([]);
+  const [allProjects, setAllProjects] = useState([]);
 
   useEffect(() => {
-    setFeaturedProjects(featured);
+    setAllProjects(list);
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const Projects = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-5">
-            {featuredProjects.map((project, index) => (
+            {allProjects.map((project, index) => (
               <ProjectContainer
                 key={index}
                 href={project.href}

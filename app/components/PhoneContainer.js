@@ -3,30 +3,32 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";
 
-const ProjectContainer = ({ href, imageSrc, title, description, isDisplay }) => {
+const PhoneContainer = ({ href, imageSrc, title, description }) => {
   const Wrapper = href ? 'a' : 'div';
 
   return (
     <Wrapper
       href={href ? href : undefined} 
-      className="group block border border-gray-700 traansition-all duration-500 rounded-lg overflow-hidden shadow-md bg-stone-900 hover:shadow-[0_4px_15px_0_#412F84]"
+      target={href ? "_blank" : undefined} 
+      rel={href ? "noopener noreferrer" : undefined} 
+      className="group block w-[300px] h-[600px] border border-gray-700 transition-all duration-500 rounded-[35px] overflow-hidden shadow-md bg-stone-900 hover:shadow-[0_4px_15px_0_#412F84] relative"
     >
-      <div className="p-2 flex items-center">
-        <div className="flex gap-1">
-          <span className="w-3 h-3 rounded-full bg-red-500"></span>
-          <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-          <span className="w-3 h-3 rounded-full bg-green-500"></span>
-        </div>
-      </div>
-      <div className={`${!isDisplay ? "h-[400px]" : "h-[250px]"} w-full overflow-hidden flex justify-center`}>
+
+      {/* iPhone Header */}
+      <div className="p-2 flex justify-between items-center"/>
+
+      {/* Image Section */}
+      <div className="block w-full overflow-hidden">
         <Image
           height={2000} 
           width={2000} 
           src={imageSrc} 
           alt={title} 
-          className={`${!isDisplay ? "w-auto" : "w-full"} h-full block object-cover object-top transition-transform duration-300 hover:scale-105`}
+          className="w-full h-full block object-cover object-top transition-transform duration-300 hover:scale-105" 
         />
       </div>
+
+      {/* Title and Description */}
       {(title || description) && (
         <div className="p-4 text-start flex justify-between items-center">
           <div>
@@ -40,12 +42,11 @@ const ProjectContainer = ({ href, imageSrc, title, description, isDisplay }) => 
   );
 };
 
-ProjectContainer.propTypes = {
+PhoneContainer.propTypes = {
   href: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   title: PropTypes.string,
-  description: PropTypes.string,
-  isDisplay: PropTypes.bool
+  description: PropTypes.string
 };
 
-export default ProjectContainer;
+export default PhoneContainer;

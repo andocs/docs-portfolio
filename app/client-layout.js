@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 import localFont from "next/font/local";
 import { Syncopate } from "next/font/google";
@@ -71,23 +72,31 @@ const syncopateRegular = Syncopate({
 });
 
 export function ClientRootLayout({ children }) {
+  const pathname = usePathname();
   const scrollRef = useRef(null);
 
   useEffect(() => {
     let locomotiveScroll;
 
-    import("locomotive-scroll").then((LocomotiveScroll) => {
-      locomotiveScroll = new LocomotiveScroll.default({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        multiplier: 0.4,
+    const initializeScroll = () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+
+      import("locomotive-scroll").then((LocomotiveScroll) => {
+        locomotiveScroll = new LocomotiveScroll.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.1,
+          multiplier: 0.4,
+        });
       });
-    });
+    };
+
+    initializeScroll();
+
     return () => {
       if (locomotiveScroll) locomotiveScroll.destroy();
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <html lang="en">

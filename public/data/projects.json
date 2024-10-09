@@ -4,7 +4,7 @@
       "id": 1,
       "page": "anker",
       "name": "Anker",
-      "description": "Anker is a project where I worked as a Frontend Developer, responsible for creating a responsive and optimized homepage.",
+      "description": "During my internship as a Web Developer at Go Commerce, I contributed to the Anker project, where I focused on building a responsive and optimized homepage along with two product display pages. My responsibilities included developing and implementing user-friendly interfaces, ensuring cross-browser compatibility, and optimizing performance for seamless navigation across devices.",
       "roles": [
         {
           "title": "Frontend Developer"
@@ -77,7 +77,7 @@
       "id": 2,
       "page": "sight",
       "name": "Sight",
-      "description": "Sight is an OCMS system where I contributed as a Full-Stack Developer, handling both frontend and backend tasks.",
+      "description": "Sight is an OCMS (Optical Clinic Management System) where I served as a Full-Stack Developer. I worked across the development lifecycle, building and maintaining both frontend and backend code. My contributions included developing five custom modules tailored to different user roles, implementing robust role-based access control (RBAC), and securing the system with JWT authentication to ensure data integrity and user privacy.",
       "roles": [
         {
           "title": "Full-Stack Developer"
@@ -155,7 +155,7 @@
       "id": 3,
       "page": "trmsweb",
       "name": "TRMS Web",
-      "description": "Pasig TRMS is a traffic regulation system where I worked on both frontend and backend as a Full-Stack Developer.",
+      "description": "Pasig TRMS is a Traffic Regulation Management System where I contributed as a Full-Stack Developer. I developed backend services using PHP and implemented RESTful APIs to efficiently store and retrieve transport-related data, such as routes, terminals, drivers, and vehicles. On the frontend, I completed missing pages and integrated new UI components to align with the updated backend logic, ensuring seamless user interactions and system functionality",
       "roles": [
         {
           "title": "Full-Stack Developer"
@@ -197,7 +197,7 @@
       "id": 4,
       "page": "apollo",
       "name": "Apollo",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "Apollo is an online thesis library designed for senior high school students to access and review previously published works. As both a designer and full-stack developer, I built the platform using VB.NET, developing the user interface and backend systems to manage and display the thesis archives. The system was slated for implementation at the school library, but due to the pandemic, its rollout was cancelled.",
       "roles": [
         {
           "title": "Designer"
@@ -207,9 +207,7 @@
         }
       ],
       "categories": ["Web Development", "Design", "Full-Stack"],
-      "tech_stack": [
-        { "icon": "SiVisualbasic", "name": "VB.NET" }
-      ],
+      "tech_stack": [{ "icon": "SiVisualbasic", "name": "VB.NET" }],
       "duration": "June 2019 - February 2020",
       "site": {
         "has_site": false,
@@ -255,7 +253,7 @@
       "id": 5,
       "page": "assy",
       "name": "Assy Portfolio",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "I developed a responsive portfolio for a team member using React, Next.js, and Tailwind CSS, focusing on clean design and smooth user experience. As the Frontend Developer, I was responsible for building dynamic components, ensuring mobile responsiveness, and optimizing performance for fast load times. The project showcased the team member's skills and projects through a visually engaging and interactive interface.",
       "roles": [
         {
           "title": "Frontend Developer"
@@ -314,7 +312,7 @@
       "id": 6,
       "page": "commutr",
       "name": "commutr.",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "commutr. is an all-in-one commuting app designed to simplify daily travel. The app allows users to search for directions, check real-time train schedules and statuses, and book tickets in advance. With a focus on providing a seamless and efficient commuting experience, the app integrates multiple features into one platform, making it a convenient tool for planning trips, tracking train times, and ensuring hassle-free ticketing. I served as the project's designer and frontend developer.",
       "roles": [
         {
           "title": "Designer"
@@ -388,15 +386,13 @@
       "id": 7,
       "page": "medpal",
       "name": "MedPal",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "MedPal is a teleconsultation platform concept developed as a business proposal during the pandemic, aimed at entering the competitive telehealth market. The platform connects doctors and patients for virtual medical consultations, offering a safe, contactless solution for medical advice and follow-up care. Designed to address the challenges of restricted movement during lockdowns, MedPal provides a user-friendly, secure space for patients to seek medical attention without the need for physical visits, ensuring continuity of care while minimizing health risks.",
       "roles": [
         {
           "title": "Designer"
         }
       ],
-      "tech_stack": [
-        { "icon": "FaFigma", "name": "Figma" }
-      ],
+      "tech_stack": [{ "icon": "FaFigma", "name": "Figma" }],
       "duration": "April 2021 - May 2021",
       "site": {
         "has_site": false,
@@ -448,14 +444,14 @@
         {
           "src": "/images/medpal/medpal-7.png",
           "alt": "MedPal Mobile App"
-        }        
+        }
       ]
     },
     {
       "id": 8,
       "page": "takefive",
       "name": "TakeFive",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "TakeFive is a mobile productivity app designed to help users stay focused by monitoring phone usage and locking distracting apps during set time intervals. With TakeFive, users can schedule app lockouts for specific periods, and once the time arrives, access to the selected apps is restricted, redirecting the user to a 'Sorry' screen. The apps remain locked until the timer runs out, encouraging users to focus on their tasks and minimize distractions, fostering better time management and productivity.",
       "roles": [
         {
           "title": "Designer"
@@ -519,22 +515,20 @@
         {
           "src": "/images/takefive/takefive-7.jpg",
           "alt": "TakeFive Mobile App"
-        }              
+        }
       ]
     },
     {
       "id": 9,
       "page": "traverse",
       "name": "Traverse",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "Traverse is an innovative online booking platform designed for seamless MRT and LRT travel. It enables users to effortlessly book their journeys while storing essential trip details, including usual routes and travel history. With real-time train information comparable to popular commuter apps, Traverse enhances the travel experience by providing timely updates on train schedules, delays, and service status. Whether you're a daily commuter or a casual traveler, Traverse simplifies your transit planning, ensuring you stay informed and on track throughout your journey.",
       "roles": [
         {
           "title": "Designer"
         }
       ],
-      "tech_stack": [
-        { "icon": "FaFigma", "name": "Figma" }
-      ],
+      "tech_stack": [{ "icon": "FaFigma", "name": "Figma" }],
       "duration": "October 2022 - November 2022",
       "site": {
         "has_site": false,
@@ -613,7 +607,7 @@
       "id": 10,
       "page": "trmsmobile",
       "name": "TRMS Mobile",
-      "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
+      "description": "The mobile version of the TRMS (Traffic Regulation Management System) web app empowers users with essential tools for efficient transportation management. With the ability to scan and generate QR codes, users can effortlessly access route information and terminal details on the go. The app is integrated with the Google Maps Directions API which identifies the quickest redirection routes, ensuring drivers reach their destinations swiftly during road closures, events, and the like.",
       "roles": [
         {
           "title": "Designer"
@@ -654,43 +648,43 @@
         {
           "src": "/images/trmsmobile/trmsmobile-1.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-2.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-3.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-4.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-5.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-6.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-7.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-8.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-9.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-10.jpg",
           "alt": "Pasig TRMS Mobile App"
-        },  
+        },
         {
           "src": "/images/trmsmobile/trmsmobile-11.jpg",
           "alt": "Pasig TRMS Mobile App"

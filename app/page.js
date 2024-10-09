@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -26,6 +27,8 @@ import carousel from "../public/data/carousel.json";
 import featured from "../public/data/featured.json";
 
 const Home = () => {
+  const router = useRouter()
+
   const [track, setTrack] = useState(null);
   const [carouselImages, setCarouselImages] = useState([]);
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -143,8 +146,9 @@ const Home = () => {
                   />
                 ))}
               </div>
-              <a
-                href="/projects"
+              <button
+                type="button" 
+                onClick={() => router.push('/projects')}
                 className="group relative overflow-hidden p-[1px] transition-all duration-700 rounded-lg hover:shadow-[0_4px_15px_0_#412F84]"
               >
                 <div className="absolute inset-[-1000%] duration-700 transition-all animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -152,7 +156,7 @@ const Home = () => {
                   View All
                   <FaArrowRight className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </section>

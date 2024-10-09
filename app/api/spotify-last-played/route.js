@@ -6,6 +6,7 @@ export async function GET(request) {
     const track = await getLastPlayedTrack();
     
     if (track) {
+      console.log(track)
       return NextResponse.json(
         {
           name: track.name,

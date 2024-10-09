@@ -117,12 +117,18 @@
       "description": "Apollo is an online library platform where I served as both a designer and a full-stack developer, creating the UI and backend systems.",
       "roles": [
         {
-          "title": "Designer + Full-Stack Developer",
-          "entails": "Designed the UI/UX and developed the backend architecture for the online library system."
+          "title": "Designer"
+        },
+        {
+          "title": "Full-Stack Developer"
         }
       ],
       "categories": ["Web Development", "Design", "Full-Stack"],
-      "tech_stack": ["React", "Node.js", "MongoDB", "Figma"],
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaReact", "name": "React" }
+      ],
       "duration": "June 2019 - February 2020",
       "site": {
         "has_site": true,
@@ -137,7 +143,7 @@
         "link": "https://www.figma.com/file/apollo-library-project"
       },
       "paper": {
-        "has_paper": false,
+        "has_paper": true,
         "link": null
       },
       "status": "Completed",

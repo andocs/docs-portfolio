@@ -44,7 +44,7 @@ const Home = () => {
     setCarouselImages(carousel);
     fetchLastPlayed();
   }, []);
- 
+
   return (
     <>
       <div className="relative">
@@ -58,7 +58,7 @@ const Home = () => {
               data-scroll-position="top"
               className="text-4xl light head-underline"
             >
-              Hey there, I'm <span>Kenneth Docot</span>👋
+              Hey there, I&apos;m <span>Kenneth Docot</span>👋
             </h1>
             <div className="flex flex-col">
               <h3
@@ -67,7 +67,7 @@ const Home = () => {
                 data-scroll-position="top"
                 className="text-xl light"
               >
-                I'm an aspiring <span>Software Engineer</span>
+                I&apos;m an aspiring <span>Software Engineer</span>
               </h3>
               <h3
                 data-scroll
@@ -92,7 +92,12 @@ const Home = () => {
             <Swiper
               modules={[Autoplay]}
               spaceBetween={10}
-              slidesPerView={3}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 3,
+                },
+              }}
               allowTouchMove={false}
               loop={true}
               speed={6500}
@@ -104,7 +109,11 @@ const Home = () => {
             >
               {carouselImages.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <ProjectContainer imageSrc={project.src} alt={project.alt} />
+                  <ProjectContainer
+                    isDisplay={true}
+                    imageSrc={project.src}
+                    alt={project.alt}
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -156,6 +165,7 @@ const Home = () => {
                         src={"/images/docs.jpeg"}
                         width={300}
                         height={300}
+                        alt="My Picture"
                         className="w-full h-full object-none object-top"
                       />
                     </div>
@@ -165,8 +175,8 @@ const Home = () => {
                       </p>
                       <br />
                       <p>
-                        I'm a 22-year-old <span>Freelance Developer</span> for
-                        The Path, with a
+                        I&apos;m a 22-year-old <span>Freelance Developer</span>{" "}
+                        for The Path, with a
                         <span> burning passion for development</span> and a
                         mission to build
                         <span> reliable and scalable solutions</span>.
@@ -240,6 +250,7 @@ const Home = () => {
                             src={track?.image}
                             width={100}
                             height={100}
+                            alt="Album Cover of Last Played Song on Spotify"
                             className="object-cover"
                           />
                         </div>
@@ -353,7 +364,9 @@ const Home = () => {
                             2020
                           </li>
                           <li>Specialized Subjects Excellence Awardee, 2020</li>
-                          <li>1st Place - Arduino Challenge @ TIP Manila, 2020</li>
+                          <li>
+                            1st Place - Arduino Challenge @ TIP Manila, 2020
+                          </li>
                           <li>With Honors, 2018 - 2020</li>
                         </ul>
                       </div>
@@ -421,7 +434,7 @@ const Home = () => {
                           <li>Valedictorian, 2024</li>
                           <li>Cum Laude, 2024</li>
                           <li>Academic Achiever Awardee, 2020 - 2024</li>
-                          <li>Dean's Lister, 2020 - 2023</li>
+                          <li>Dean&apos;s Lister, 2020 - 2023</li>
                         </ul>
                       </div>
                       <div className="flex flex-1 flex-col">
@@ -444,34 +457,49 @@ const Home = () => {
                       </h3>
                       <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
                         <li>
-                          <a href="" className="flex items-center gap-1 head-underline w-max">
+                          <a
+                            href=""
+                            className="flex items-center gap-1 head-underline w-max"
+                          >
                             CCNA: Introduction to Networks - issued by Cisco |
                             Dec. 2021
                             <RiVerifiedBadgeFill className="text-green-400" />
                           </a>
                         </li>
                         <li>
-                          <a href="" className="flex items-center gap-1 head-underline w-max">
+                          <a
+                            href=""
+                            className="flex items-center gap-1 head-underline w-max"
+                          >
                             CCNA: Switching, Routing, and Wireless Essentials -
                             issued by Cisco | Jun. 2022
                             <RiVerifiedBadgeFill className="text-green-400" />
                           </a>
                         </li>
                         <li>
-                          <a href="" className="flex items-center gap-1 head-underline w-max">
+                          <a
+                            href=""
+                            className="flex items-center gap-1 head-underline w-max"
+                          >
                             Cybersecurity Essentials - issued by Cisco | Jan.
                             2023
                             <RiVerifiedBadgeFill className="text-green-400" />
                           </a>
                         </li>
                         <li>
-                          <a href="" className="flex items-center gap-1 head-underline w-max">
+                          <a
+                            href=""
+                            className="flex items-center gap-1 head-underline w-max"
+                          >
                             Network Security - issued by Cisco | Aug. 2023
                             <RiVerifiedBadgeFill className="text-green-400" />
                           </a>
                         </li>
                         <li>
-                          <a href="" className="flex items-center gap-1 head-underline w-max">
+                          <a
+                            href=""
+                            className="flex items-center gap-1 head-underline w-max"
+                          >
                             CCNA: Enterprise Networking, Security, and
                             Automation - issued by Cisco | Sep. 2023
                             <RiVerifiedBadgeFill className="text-green-400" />
@@ -494,6 +522,7 @@ const Home = () => {
                   src={"/images/pcc_logo.png"}
                   width={300}
                   height={300}
+                  alt="Pasig Catholic College's Logo"
                   className="w-full"
                 />
               </div>
@@ -513,7 +542,7 @@ const Home = () => {
             </h1>
 
             <div className="-my-6">
-            {/* The Path */}
+              {/* The Path */}
               <div className="relative pl-8 sm:pl-32 py-6 group">
                 <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                   <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
@@ -547,7 +576,7 @@ const Home = () => {
                     <ul className="pl-4 flex flex-col gap-2 list-disc text-gray-400">
                       <li>
                         Developed full-stack web applications tailored to each
-                        client's preferred technology stack, ensuring high
+                        client&apos;s preferred technology stack, ensuring high
                         quality and reliability.
                       </li>
                       <li>
@@ -565,7 +594,7 @@ const Home = () => {
                 </div>
               </div>
 
-            {/* GoCommerce */}
+              {/* GoCommerce */}
               <div className="relative pl-8 sm:pl-32 py-6 group">
                 <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                   <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">

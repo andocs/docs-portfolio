@@ -61,7 +61,7 @@ const ProjectPage = () => {
           >
             <div>
               <div className="flex flex-wrap md:flex-nowrap items-center gap-x-6 mb-2">
-                <h1 className="w-max text-6xl">
+                <h1 className="w-max text-5xl md:text-6xl">
                   <span className="font-neue tracking-normal font-bold">
                     {project.name}
                   </span>
@@ -86,7 +86,7 @@ const ProjectPage = () => {
               </div>
 
               {/* Status */}
-              <div className="flex gap-2 items-center mb-4">
+              <div className="flex flex-wrap md:flex-nowrap gap-2 items-center mb-4">
                 <p className="text-gray-500">{project.duration}</p>
                 <div className="flex items-center gap-1">
                   <span

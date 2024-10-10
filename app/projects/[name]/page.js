@@ -1,10 +1,8 @@
 "use client";
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-
 import projectsData from "../../../public/data/projects.json";
-
 import ProjectContainer from "@/app/components/ProjectContainer";
-
 import * as FontAwesome from "react-icons/fa";
 import * as SiFont from "react-icons/si";
 import * as TbIcons from "react-icons/tb";
@@ -25,38 +23,52 @@ const getIconComponent = (iconName) => {
 const ProjectPage = () => {
   const params = useParams();
   const { name } = params;
-
   const project = projectsData.projects.find(
     (proj) => proj.page.toLowerCase() === name.toLowerCase()
   );
+
+  const [isSticky, setIsSticky] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSticky(window.innerWidth >= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   if (!project) {
     return <div>Project not found.</div>;
   }
 
   return (
-    <section data-scroll-section className="flex flex-col py-24">
+    <section data-scroll-section className="flex flex-col md:py-24">
       <div id="project" className="container mx-auto px-6">
-        <div className="flex gap-12">
+        <div className="flex flex-col md:flex-row gap-12">
           {/* Left Side - Sticky Info */}
           <div
             data-scroll
-            data-scroll-sticky
-            data-scroll-position="top"
-            data-scroll-offset="-20%, 20%"
-            data-scroll-target="#project"
-            className="w-1/2 h-max space-y-8"
+            {...(isSticky && { "data-scroll-sticky": "" })}
+            {...(isSticky && { "data-scroll-position": "top" })}
+            {...(isSticky && { "data-scroll-offset": "-20%, 20%" })}
+            {...(isSticky && { "data-scroll-target": "#project" })}
+            className="w-full md:w-1/2 h-max space-y-8"
           >
             <div>
-              <div className="flex items-center gap-6 mb-2">
-                <h1 className="text-6xl">
+              <div className="flex flex-wrap md:flex-nowrap items-center gap-x-6 mb-2">
+                <h1 className="w-max text-6xl">
                   <span className="font-neue tracking-normal font-bold">
                     {project.name}
                   </span>
                 </h1>
                 {/* Roles */}
-                <div className="overflow-hidden whitespace-nowrap w-full h-full relative">
-                  <div className="flex gap-1 no-scroll">
+                <div className="overflow-hidden whitespace-nowrap h-full relative">
+                  <div className="flex gap-2 no-scroll">
                     {project.roles.map((role, index) => (
                       <div
                         className="inline-block rounded-md border border-purple-400 px-2 w-max"
@@ -90,7 +102,7 @@ const ProjectPage = () => {
                 </div>
               </div>
 
-              <p>{project.description}</p>
+              <p className="text-sm sm:text-base">{project.description}</p>
             </div>
 
             {/* Links */}
@@ -99,7 +111,7 @@ const ProjectPage = () => {
               project.figma_uizard.has_project ||
               project.paper.has_paper) && (
               <div>
-                <ul className="flex space-x-2">
+                <ul className="flex sm:flex-nowrap flex-wrap justify-start gap-2">
                   {project.site.has_site && (
                     <li>
                       <a
@@ -174,7 +186,7 @@ const ProjectPage = () => {
                   Tech Stack
                 </span>
               </h2>
-              <div className="flex flex-wrap items-center space-x-4">
+              <div className="flex flex-wrap items-center gap-4">
                 {project.tech_stack.map((tech, index) => {
                   const IconComponent = getIconComponent(tech.icon);
                   return (
@@ -201,7 +213,7 @@ const ProjectPage = () => {
 
           {/* Right Side - Project Images */}
           <div
-            className="flex flex-col items-center space-y-8 w-1/2 h-max"
+            className="flex flex-col items-center space-y-8 w-full md:w-1/2 h-max"
             data-scroll
           >
             {project.images.map((image, index) => {

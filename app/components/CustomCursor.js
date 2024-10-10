@@ -119,10 +119,10 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <>
+    <div className="hidden md:block">
       <div className="cursor-outer"></div>
       <div className="cursor-inner"></div>
-    </>
+    </div>
   );
 };
 

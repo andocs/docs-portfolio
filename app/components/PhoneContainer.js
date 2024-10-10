@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -14,7 +13,7 @@ import {
   FaGithub,
   FaSpotify,
   FaBriefcase,
-  FaArrowRight
+  FaArrowRight,
 } from "react-icons/fa";
 import { IoSchool } from "react-icons/io5";
 import { RiDownloadLine, RiVerifiedBadgeFill } from "react-icons/ri";
@@ -27,8 +26,6 @@ import carousel from "../public/data/carousel.json";
 import featured from "../public/data/featured.json";
 
 const Home = () => {
-  const router = useRouter()
-
   const [track, setTrack] = useState(null);
   const [carouselImages, setCarouselImages] = useState([]);
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -44,9 +41,13 @@ const Home = () => {
       }
     };
 
+    const intervalId = setInterval(fetchLastPlayed, 600000);
+
     setFeaturedProjects(featured);
     setCarouselImages(carousel);
     fetchLastPlayed();
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -60,7 +61,7 @@ const Home = () => {
               data-scroll
               data-scroll-speed="8"
               data-scroll-position="top"
-              className="text-4xl light head-underline"
+              className="text-xs sm:text-xl lg:text-4xl light head-underline"
             >
               Hey there, I&apos;m <span>Kenneth Docot</span>👋
             </h1>
@@ -69,7 +70,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-speed="7"
                 data-scroll-position="top"
-                className="text-xl light"
+                className="text-xs sm:text-sm lg:text-xl light"
               >
                 I&apos;m an aspiring <span>Software Engineer</span>
               </h3>
@@ -77,7 +78,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-speed="5"
                 data-scroll-position="top"
-                className="text-xl light"
+                className="text-xs sm:text-sm lg:text-xl light"
               >
                 With a passion for development
               </h3>
@@ -99,8 +100,11 @@ const Home = () => {
               slidesPerView={1}
               breakpoints={{
                 640: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                 },
+                1024: {
+                  slidesPerView: 3,
+                }
               }}
               allowTouchMove={false}
               loop={true}
@@ -135,7 +139,7 @@ const Home = () => {
               <h1 className="text-center text-3xl">
                 <span>Featured Projects</span>
               </h1>
-              <div className="grid grid-cols-2 grid-rows-2 gap-x-4 gap-y-5">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-5">
                 {featuredProjects.map((project, index) => (
                   <ProjectContainer
                     key={index}
@@ -146,9 +150,8 @@ const Home = () => {
                   />
                 ))}
               </div>
-              <button
-                type="button" 
-                onClick={() => router.push('/projects')}
+              <a
+                href="/projects"
                 className="group relative overflow-hidden p-[1px] transition-all duration-700 rounded-lg hover:shadow-[0_4px_15px_0_#412F84]"
               >
                 <div className="absolute inset-[-1000%] duration-700 transition-all animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -156,7 +159,7 @@ const Home = () => {
                   View All
                   <FaArrowRight className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -168,13 +171,13 @@ const Home = () => {
               <h1 className="text-center text-3xl">
                 <span>About Me</span>
               </h1>
-              <div className="grid grid-cols-8 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-8 gap-4">
                 {/* Bento Row 1 */}
 
                 {/* Name and Info */}
-                <div className="group relative overflow-hidden col-span-4 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-4 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <div className="h-full w-full p-8 flex gap-5 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
+                  <div className="h-full w-full p-8 flex flex-col sm:flex-row gap-5 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <div className="w-[140px] h-[140px] rounded-full overflow-hidden">
                       <Image
                         src={"/images/docs.jpeg"}
@@ -184,7 +187,7 @@ const Home = () => {
                         className="w-full h-full object-none object-top"
                       />
                     </div>
-                    <div className="flex-1 text-justify">
+                    <div className="flex-1 text-start">
                       <p>
                         My name is <span>Kenneth Docot</span>.
                       </p>
@@ -201,7 +204,7 @@ const Home = () => {
                 </div>
 
                 {/* Projects Developed */}
-                <div className="group relative overflow-hidden col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex flex-col font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <p className="text-6xl font-bold">
@@ -212,7 +215,7 @@ const Home = () => {
                 </div>
 
                 {/* Freelancing Experience */}
-                <div className="group relative overflow-hidden col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex flex-col font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <p className="text-6xl font-bold">
@@ -225,7 +228,7 @@ const Home = () => {
                 {/* Bento Row 2 */}
 
                 {/* Fun Fact */}
-                <div className="group relative overflow-hidden col-span-3 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-4 lg:col-span-3 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex gap-4 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <p className="text-5xl text-center flex">🏅</p>
@@ -237,7 +240,7 @@ const Home = () => {
                 </div>
 
                 {/* Valedictorian */}
-                <div className="group relative overflow-hidden col-span-3 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-4 lg:col-span-3 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex gap-4 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <p className="text-5xl text-center flex">🎓</p>
@@ -249,7 +252,7 @@ const Home = () => {
                 </div>
 
                 {/* Last Played */}
-                <div className="group relative overflow-hidden col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#11998E]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#11998E]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_270deg_at_50%_50%,#6DD5ED_0%,#11998E_50%,#6DD5ED_100%)]" />
                   <div className="h-full w-full p-8 gap-12 flex flex-col font-neue rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <div className="flex items-center gap-4">
@@ -283,22 +286,34 @@ const Home = () => {
                 {/* Bento Row 3 */}
 
                 {/* My Socials */}
-                <div className="group relative overflow-hidden col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 gap-5 flex flex-col font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <ul className="flex gap-10">
                       <li>
-                        <a href="#">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.facebook.com/docotkat"
+                        >
                           <FaFacebookF className="w-[30px] h-[30px] duration-500 transition-all hover:text-blue-500" />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://github.com/andocs"
+                        >
                           <FaGithub className="w-[30px] h-[30px] duration-500 transition-all hover:text-yellow-100" />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.linkedin.com/in/docotkat/"
+                        >
                           <FaLinkedinIn className="w-[30px] h-[30px] duration-500 transition-all hover:text-blue-400" />
                         </a>
                       </li>
@@ -310,7 +325,7 @@ const Home = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="group relative overflow-hidden col-span-4 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-4 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 gap-5 flex flex-col font-neue rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <p className="text-center text-2xl">
@@ -321,12 +336,14 @@ const Home = () => {
                 </div>
 
                 {/* Resume */}
-                <div className="group relative overflow-hidden col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
+                <div className="group relative overflow-hidden col-span-1 sm:col-span-4 lg:col-span-2 row-span-1 p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex gap-4 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <a
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex justify-center items-center gap-4"
-                      href="#"
+                      href="/files/Docot Kenneth Resume Oct 2024.pdf"
                     >
                       <RiDownloadLine className="w-[40px] h-[40px]" />
                       <p className="text-2xl">
@@ -349,7 +366,7 @@ const Home = () => {
             <div className="flex gap-12">
               {/* Education Information (Left Section) */}
               <div
-                className="flex flex-col space-y-8 w-3/4 h-max"
+                className="flex flex-col space-y-8 w-full lg:w-3/4 h-max"
                 data-scroll
                 data-scroll-speed="1"
               >
@@ -357,23 +374,23 @@ const Home = () => {
                 <div className="group relative overflow-hidden p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-6 font-neue rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
-                    <h2 className="text-3xl font-bold mb-2">
+                    <h2 className="text-xl sm:text-3xl font-bold mb-2">
                       <span className="font-neue">
                         TVL Strand - Information and Communications Technology
                       </span>
                     </h2>
-                    <p className="text-lg text-gray-400 flex items-center gap-2 mb-4">
+                    <p className="text-sm sm:text-lg text-gray-400 flex items-center gap-2 mb-4">
                       <IoSchool />
                       Pasig Catholic College, 2018 - 2020
                     </p>
-                    <div className="flex w-full gap-10">
-                      <div className="flex flex-1 flex-col border-r-2 border-r-white">
+                    <div className="flex flex-col sm:flex-row w-full gap-2 sm:gap-10">
+                      <div className="flex flex-1 flex-col sm:border-r-2 sm:border-r-white">
                         <h3 className="mb-2">
-                          <span className="font-neue font-bold tracking-normal text-lg">
+                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                             Academic Achievements
                           </span>
                         </h3>
-                        <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                           <li>
                             Best Thesis (Apollo: An Online SHS Thesis Library),
                             2020
@@ -387,11 +404,11 @@ const Home = () => {
                       </div>
                       <div className="flex flex-1 flex-col">
                         <h3 className="font-bold tracking-normal text-lg mb-2">
-                          <span className="font-neue font-bold tracking-normal text-lg">
+                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                             Leadership Experience
                           </span>
                         </h3>
-                        <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                           <li>President - TVL Council, 2020</li>
                           <li>Class Vice President, 2020</li>
                           <li>Year Level Beadle - TVL Council, 2019</li>
@@ -400,24 +417,24 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="flex flex-1 flex-col">
-                      <h3 className="font-bold tracking-normal text-lg mt-4 mb-2">
-                        <span className="font-neue font-bold tracking-normal text-lg">
+                      <h3 className="font-bold tracking-normal mt-4 mb-2">
+                        <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                           Certifications Gained
                         </span>
                       </h3>
-                      <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                      <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                         <li>
-                          <a className="flex items-center gap-1 head-underline w-max">
+                          <a className="flex items-center gap-1 head-underline sm:w-max">
                             Microsoft Office Specialist (MS PowerPoint) - issued
                             by Microsoft, Jun. 2020
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                         <li>
-                          <a className="flex items-center gap-1 head-underline w-max">
+                          <a className="flex items-center gap-1 head-underline sm:w-max">
                             National Certificate II (Computer Systems Servicing)
                             - issued by TESDA, Apr. 2020
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                       </ul>
@@ -429,23 +446,23 @@ const Home = () => {
                 <div className="group relative overflow-hidden p-[1px] rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]">
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-6 font-neue rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
-                    <h2 className="text-3xl font-bold mb-2">
+                    <h2 className="text-xl sm:text-3xl font-bold mb-2">
                       <span className="font-neue">
                         Bachelor of Science in Information Technology
                       </span>
                     </h2>
-                    <p className="text-lg text-gray-400 flex items-center gap-2 mb-4">
+                    <p className="text-sm sm:text-lg text-gray-400 flex items-center gap-2 mb-4">
                       <IoSchool />
                       Pasig Catholic College, 2020 - 2024
                     </p>
-                    <div className="flex w-full gap-10">
-                      <div className="flex flex-1 flex-col border-r-2 border-r-white">
+                    <div className="flex flex-col sm:flex-row w-full gap-2 sm:gap-10">
+                      <div className="flex flex-1 flex-col sm:border-r-2 sm:border-r-white">
                         <h3 className="mb-2">
-                          <span className="font-neue font-bold tracking-normal text-lg">
+                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                             Academic Achievements
                           </span>
                         </h3>
-                        <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                           <li>Valedictorian, 2024</li>
                           <li>Cum Laude, 2024</li>
                           <li>Academic Achiever Awardee, 2020 - 2024</li>
@@ -453,12 +470,12 @@ const Home = () => {
                         </ul>
                       </div>
                       <div className="flex flex-1 flex-col">
-                        <h3 className="font-bold tracking-normal text-lg mb-2">
-                          <span className="font-neue font-bold tracking-normal text-lg">
+                        <h3 className="font-bold tracking-normal mb-2">
+                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                             Leadership Experience
                           </span>
                         </h3>
-                        <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                           <li>PRO Internal - ITS Council, 2022 - 2024</li>
                           <li>Year Level Beadle - ITS Council, 2020 - 2022</li>
                         </ul>
@@ -466,58 +483,68 @@ const Home = () => {
                     </div>
                     <div className="flex flex-1 flex-col">
                       <h3 className="font-bold tracking-normal text-lg mt-4 mb-2">
-                        <span className="font-neue font-bold tracking-normal text-lg">
+                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                           Certifications Gained
                         </span>
                       </h3>
-                      <ul className="pl-4 text-sm flex flex-col gap-2 list-disc text-gray-400">
+                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                         <li>
                           <a
-                            href=""
-                            className="flex items-center gap-1 head-underline w-max"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.credly.com/badges/1532e0f1-23de-47f7-a773-fc85f3994322"
+                            className="flex items-center gap-1 head-underline sm:w-max"
                           >
                             CCNA: Introduction to Networks - issued by Cisco |
                             Dec. 2021
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                         <li>
                           <a
-                            href=""
-                            className="flex items-center gap-1 head-underline w-max"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.credly.com/badges/eeeb0cfd-2aba-4033-a6f2-ee0fc033cbbe"
+                            className="flex items-center gap-1 head-underline sm:w-max"
                           >
                             CCNA: Switching, Routing, and Wireless Essentials -
                             issued by Cisco | Jun. 2022
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                         <li>
                           <a
-                            href=""
-                            className="flex items-center gap-1 head-underline w-max"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.credly.com/badges/d860c982-0df6-4dff-8ad3-8800bae6f695"
+                            className="flex items-center gap-1 head-underline sm:w-max"
                           >
                             Cybersecurity Essentials - issued by Cisco | Jan.
                             2023
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                         <li>
                           <a
-                            href=""
-                            className="flex items-center gap-1 head-underline w-max"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.credly.com/badges/4a2c7639-6a61-454e-aa89-57c3900bfee7"
+                            className="flex items-center gap-1 head-underline sm:w-max"
                           >
                             Network Security - issued by Cisco | Aug. 2023
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                         <li>
                           <a
-                            href=""
-                            className="flex items-center gap-1 head-underline w-max"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.credly.com/badges/2eca7c62-e477-43b5-991a-4b0487d90516"
+                            className="flex items-center gap-1 head-underline sm:w-max"
                           >
                             CCNA: Enterprise Networking, Security, and
                             Automation - issued by Cisco | Sep. 2023
-                            <RiVerifiedBadgeFill className="text-green-400" />
+                            <RiVerifiedBadgeFill className="text-green-400 hidden sm:block" />
                           </a>
                         </li>
                       </ul>
@@ -531,7 +558,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-sticky
                 data-scroll-target="#education"
-                className="w-1/4 h-max"
+                className="w-1/4 h-max hidden lg:block"
               >
                 <Image
                   src={"/images/pcc_logo.png"}
@@ -682,7 +709,7 @@ const Home = () => {
               </h2>
 
               {/* Card Containers */}
-              <div className="flex space-x-4 justify-center">
+              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0 justify-center items-stretch">
                 {/* Email */}
                 <div
                   className="group relative overflow-hidden p-[1px] shadow rounded-lg transition-all duration-700 hover:shadow-[0_4px_15px_0_#412F84]"

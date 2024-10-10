@@ -18,7 +18,7 @@ const Projects = () => {
       <div data-scroll className="container mx-auto px-6">
         <div className="flex flex-col gap-16 text-center">
           <div className="flex flex-col gap-4">
-            <h1 className="text-7xl">
+            <h1 className="text-4xl md:text-7xl">
               <span className="font-neue tracking-normal font-bold">
                 All Projects
               </span>
@@ -28,7 +28,7 @@ const Projects = () => {
               commissions.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-5">
             {allProjects.map((project, index) => (
               <ProjectContainer
                 key={index}

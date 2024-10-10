@@ -105,9 +105,11 @@ export function ClientRootLayout({ children }) {
           multiplier: 0.4,
           smartphone: {
             smooth: true,
+            multiplier: 0.7,
           },
           tablet: {
             smooth: true,
+            multiplier: 0.7,
           },
         });
 

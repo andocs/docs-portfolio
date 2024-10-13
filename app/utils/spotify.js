@@ -18,6 +18,7 @@ const RECENTLY_PLAYED_ENDPOINT =
         grant_type: "refresh_token",
         refresh_token: refreshToken,
       }),
+      cache: "no-cache"
     });
   
     const responseText = await response.text();

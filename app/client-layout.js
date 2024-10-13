@@ -75,27 +75,27 @@ const syncopateRegular = Syncopate({
 export function ClientRootLayout({ children }) {
   const pathname = usePathname();
   const scrollRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(true); // State to manage loading
-  const [progress, setProgress] = useState(0); // State for loading progress
-  const [fadeOut, setFadeOut] = useState(false); // State for fade-out animation
+  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     let locomotiveScroll;
 
     const initializeScroll = () => {
       if (locomotiveScroll) {
-        locomotiveScroll.destroy(); // Destroy existing scroll instance
+        locomotiveScroll.destroy();
       }
 
       const loadingInterval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 90) {
             clearInterval(loadingInterval);
-            return 100; // Ensure it ends at 100
+            return 100;
           }
-          return prev + 10; // Increase progress
+          return prev + 10;
         });
-      }, 300); // Adjust timing as needed
+      }, 300);
 
       import("locomotive-scroll").then((LocomotiveScroll) => {
         locomotiveScroll = new LocomotiveScroll.default({
@@ -105,27 +105,26 @@ export function ClientRootLayout({ children }) {
           multiplier: 0.4,
           smartphone: {
             smooth: true,
-            multiplier: 0.7,
+            multiplier: 1,
           },
           tablet: {
             smooth: true,
-            multiplier: 0.7,
+            multiplier: 1,
           },
         });
 
-        // Set a timeout to end loading after 3 seconds
         const timeout = setTimeout(() => {
-          setFadeOut(true); // Trigger fade-out
-          setProgress(100); // Ensure progress reaches 100%
-          clearInterval(loadingInterval); // Clear the loading interval
+          setFadeOut(true);
+          setProgress(100);
+          clearInterval(loadingInterval);
 
           // Wait for the fade-out transition to finish before setting loading to false
           setTimeout(() => {
-            setIsLoading(false); // Set loading to false after fading out
-          }, 300); // Match this with the CSS transition duration
-        }, 1500); // 3 seconds
+            setIsLoading(false);
+          }, 300);
+        }, 1500);
 
-        return () => clearTimeout(timeout); // Cleanup the timeout on component unmount
+        return () => clearTimeout(timeout);
       });
     };
 
@@ -160,7 +159,7 @@ export function ClientRootLayout({ children }) {
               progress={progress} 
               className={`transition-opacity duration-700 ${fadeOut ? 'opacity-0' : 'opacity-100'}`} 
             />
-          ) // Pass the progress to the Loading component
+          )
         }
         <div className={`transition-opacity duration-700 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
           <CustomCursor />

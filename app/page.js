@@ -106,7 +106,7 @@ const Home = () => {
                 },
                 1024: {
                   slidesPerView: 3,
-                }
+                },
               }}
               allowTouchMove={false}
               loop={true}
@@ -153,7 +153,7 @@ const Home = () => {
                 ))}
               </div>
               <button
-              onClick={() => router.push('/projects')}
+                onClick={() => router.push("/projects")}
                 className="group relative overflow-hidden p-[1px] transition-all duration-700 rounded-lg hover:shadow-[0_4px_15px_0_#412F84]"
               >
                 <div className="absolute inset-[-1000%] duration-700 transition-all animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -342,6 +342,7 @@ const Home = () => {
                   <div className="absolute inset-[-1000%] duration-700 transition-all opacity-0 group-hover:opacity-100 group-hover:animate-shimmer bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <div className="h-full w-full p-8 flex gap-4 font-neue items-center justify-center rounded-lg bg-[#282828] text-white backdrop-blur-3xl">
                     <a
+                      download
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex justify-center items-center gap-4"
@@ -485,11 +486,11 @@ const Home = () => {
                     </div>
                     <div className="flex flex-1 flex-col">
                       <h3 className="font-bold tracking-normal text-lg mt-4 mb-2">
-                          <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
+                        <span className="font-neue font-bold tracking-normal text-sm sm:text-lg">
                           Certifications Gained
                         </span>
                       </h3>
-                        <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
+                      <ul className="pl-4 text-xs sm:text-sm flex flex-col gap-2 list-disc text-gray-400">
                         <li>
                           <a
                             target="_blank"

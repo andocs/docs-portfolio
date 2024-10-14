@@ -1,5 +1,17 @@
 [
   {
+    "alt": "Waykar E-Commerce",
+    "title": "Waykar",
+    "description": "Frontend Developer",
+    "href": "/projects/waykar"
+  },
+  {
+    "alt": "LGL Corp. E-Commerce",
+    "title": "LGL Corp.",
+    "description": "Frontend Developer",
+    "href": "/projects/lgl-corp"
+  },
+  {
     "src": "/images/anker/anker-featured.png",
     "alt": "Anker Homepage",
     "title": "Anker",
@@ -12,20 +24,6 @@
     "title": "Sight",
     "description": "Full-Stack Developer",
     "href": "/projects/sight"
-  },
-  {
-    "src": "/images/trmsweb/trmsweb-1.png",
-    "alt": "Pasig TRMS Web App",
-    "title": "Pasig TRMS Web App",
-    "description": "Full-Stack Developer",
-    "href": "/projects/trmsweb"
-  },
-  {
-    "src": "/images/trmsmobile/trmsmobile-featured.jpg",
-    "alt": "Pasig TRMS Mobile App",
-    "title": "Pasig TRMS Mobile App",
-    "description": "Designer + Mobile Developer",
-    "href": "/projects/trmsmobile"
   },
   {
     "src": "/images/assy/assy-featured.png",

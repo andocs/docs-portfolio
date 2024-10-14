@@ -60,7 +60,7 @@ const ProjectPage = () => {
             className="w-full md:w-1/2 h-max space-y-8"
           >
             <div>
-              <div className="flex flex-wrap md:flex-nowrap items-center gap-x-6 mb-2">
+              <div className="flex flex-wrap items-center gap-x-6 mb-2">
                 <h1 className="w-max text-5xl md:text-6xl">
                   <span className="font-neue tracking-normal font-bold">
                     {project.name}
@@ -216,13 +216,17 @@ const ProjectPage = () => {
             className="flex flex-col items-center space-y-8 w-full md:w-1/2 h-max"
             data-scroll
           >
-            {project.images.map((image, index) => {
-              return project.isMobile ? (
-                <PhoneContainer key={index} imageSrc={image.src} />
-              ) : (
-                <ProjectContainer key={index} imageSrc={image.src} />
-              );
-            })}
+            {project.images ? (
+              project.images.map((image, index) => {
+                return project.isMobile ? (
+                  <PhoneContainer key={index} imageSrc={image.src} />
+                ) : (
+                  <ProjectContainer key={index} imageSrc={image.src} />
+                );
+              })
+            ) : (
+              <ProjectContainer />
+            )}
           </div>
         </div>
       </div>

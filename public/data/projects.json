@@ -87,7 +87,6 @@
         { "icon": "FaHtml5", "name": "HTML5" },
         { "icon": "FaCss3Alt", "name": "CSS3" },
         { "icon": "SiTailwindcss", "name": "Tailwind" },
-        { "icon": "FaReact", "name": "React" },
         { "icon": "FaJs", "name": "JavaScript" },
         { "icon": "SiMongodb", "name": "MongoDB" },
         { "icon": "SiExpress", "name": "Express" },
@@ -153,9 +152,9 @@
     },
     {
       "id": 3,
-      "page": "trmsweb",
-      "name": "TRMS Web",
-      "description": "Pasig TRMS is a Traffic Regulation Management System where I contributed as a Full-Stack Developer. I developed backend services using PHP and implemented RESTful APIs to efficiently store and retrieve transport-related data, such as routes, terminals, drivers, and vehicles. On the frontend, I completed missing pages and integrated new UI components to align with the updated backend logic, ensuring seamless user interactions and system functionality",
+      "page": "lgl-corp",
+      "name": "LGL Corp",
+      "description": "LGL Corp is an eCommerce platform built on Shopify, specializing in selling herbal supplements. As a Full-Stack Developer, I was responsible for customizing and extending the Shopify platform to meet the specific needs of the business. This included creating custom Shopify sections and templates to enhance the product display and improve user experience. I also implemented advanced features like 3D Product Customization. My work ensured that the site was optimized for both desktop and mobile, providing a smooth and responsive experience for users.",
       "roles": [
         {
           "title": "Full-Stack Developer"
@@ -165,66 +164,62 @@
         { "icon": "FaHtml5", "name": "HTML5" },
         { "icon": "FaCss3Alt", "name": "CSS3" },
         { "icon": "FaJs", "name": "JavaScript" },
-        { "icon": "FaPhp", "name": "PHP" },
-        { "icon": "SiMysql", "name": "MySQL" }
+        { "icon": "SiShopify", "name": "Shopify" }
       ],
-      "duration": "July 2024 - September 2024",
+      "duration": "January 2024",
       "site": {
-        "has_site": true,
-        "link": "https://pasigtrms.great-site.net/"
+        "has_site": false,
+        "link": null
       },
       "github_repo": {
-        "has_repo": true,
-        "link": "https://github.com/andocs/pasigtrms"
+        "has_repo": false,
+        "link": null
       },
       "figma_uizard": {
         "has_project": true,
-        "link": "https://www.figma.com/proto/WkzC3xeQORbiB6KVT6Bdpq/TRMS?node-id=0-1&t=GUGc6xxmpwsBlYSk-1"
+        "link": "https://www.figma.com/proto/sxcUDaYBzf4NdzGzjecUdR/LG-CORP-NEW-DESIGN-CLEAN?node-id=0-1&t=zbQNXojdEXHgxgQu-1"
       },
       "paper": {
         "has_paper": false,
         "link": null
       },
-      "status": "Completed",
-      "images": [
-        {
-          "src": "/images/trmsweb/trmsweb-1.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-featured.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-2.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-3.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-4.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-5.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-6.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-7.png",
-          "alt": "Pasig TRMS Web App"
-        },
-        {
-          "src": "/images/trmsweb/trmsweb-8.png",
-          "alt": "Pasig TRMS Web App"
-        }        
-      ]
+      "status": "Ongoing"      
     },
+    {
+      "id": 10,
+      "page": "waykar",
+      "name": "Waykar",
+      "description": "Waykar is a brand specializing in dehumidifiers, and I worked as a Frontend Developer on their Shopify website. My role involved customizing the frontend design to match the brand’s identity and enhance user experience. I developed and refined Shopify sections and templates to better showcase product features and improve site aesthetics. Additionally, I worked on optimizing the site's responsiveness and performance across different devices, ensuring that the website provided a seamless browsing experience. My contributions also included integrating design changes based on customer feedback and brand guidelines.",
+      "roles": [
+        {
+          "title": "Full-Stack Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "SiShopify", "name": "Shopify" }
+      ],
+      "duration": "August 2024",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": false,
+        "link": null
+      },
+      "figma_uizard": {
+        "has_project": false,
+        "link": null
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Ongoing"
+    },    
     {
       "id": 4,
       "page": "apollo",
@@ -634,94 +629,6 @@
           "alt": "Traverse Mobile App"
         }
       ]
-    },
-    {
-      "id": 10,
-      "page": "trmsmobile",
-      "name": "TRMS Mobile",
-      "description": "The mobile version of the TRMS (Traffic Regulation Management System) web app empowers users with essential tools for efficient transportation management. With the ability to scan and generate QR codes, users can effortlessly access route information and terminal details on the go. The app is integrated with the Google Maps Directions API which identifies the quickest redirection routes, ensuring drivers reach their destinations swiftly during road closures, events, and the like.",
-      "roles": [
-        {
-          "title": "Designer"
-        },
-        {
-          "title": "Mobile Developer"
-        }
-      ],
-      "tech_stack": [
-        { "icon": "FaFigma", "name": "Figma" },
-        { "icon": "FaJs", "name": "JavaScript" },
-        { "icon": "TbBrandReactNative", "name": "React Native" }
-      ],
-      "duration": "July 2024 - September 2024",
-      "site": {
-        "has_site": false,
-        "link": null
-      },
-      "github_repo": {
-        "has_repo": true,
-        "link": "https://github.com/andocs/PasigTRMSMobileApp"
-      },
-      "figma_uizard": {
-        "has_project": true,
-        "link": "https://www.figma.com/proto/Kj0qVip6H8VYWgSA8Jo6Wh/Pasig-TRMS-Mobile-App?node-id=14-3143&t=hCxqWDLj2Ze0GRjy-1"
-      },
-      "paper": {
-        "has_paper": false,
-        "link": null
-      },
-      "isMobile": true,
-      "status": "Completed",
-      "images": [
-        {
-          "src": "/images/trmsmobile/trmsmobile-featured.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-1.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-2.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-3.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-4.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-5.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-6.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-7.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-8.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-9.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-10.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        },
-        {
-          "src": "/images/trmsmobile/trmsmobile-11.jpg",
-          "alt": "Pasig TRMS Mobile App"
-        }
-      ]
-    }
+    }    
   ]
 }

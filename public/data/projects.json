@@ -4,7 +4,7 @@
       "id": 1,
       "page": "anker",
       "name": "Anker",
-      "description": "During my internship as a Web Developer at Go Commerce, I contributed to the Anker project, where I focused on building a responsive and optimized homepage along with two product display pages. My responsibilities included developing and implementing user-friendly interfaces, ensuring cross-browser compatibility, and optimizing performance for seamless navigation across devices.",
+      "description": "During my internship as a Web Developer at GoCommerce, I contributed to the Anker PH's Shopify store, where I focused on building a responsive and optimized homepage along with two product display pages. My responsibilities included developing and implementing user-friendly interfaces, creating reusable components, ensuring cross-browser compatibility, and optimizing performance for seamless navigation across devices.",
       "roles": [
         {
           "title": "Frontend Developer"
@@ -77,7 +77,7 @@
       "id": 2,
       "page": "sight",
       "name": "Sight",
-      "description": "Sight is an OCMS (Optical Clinic Management System) where I served as a Full-Stack Developer. I worked across the development lifecycle, building and maintaining both frontend and backend code. My contributions included developing five custom modules tailored to different user roles, implementing robust role-based access control (RBAC), and securing the system with JWT authentication to ensure data integrity and user privacy.",
+      "description": "Sight is an OCMS (Optical Clinic Management System) where I served as a Full-Stack Developer. It served as our capstone project. I worked across the development lifecycle, building and maintaining both frontend and backend code. My contributions included developing five custom modules tailored to different user roles, implementing robust role-based access control (RBAC), and securing the system with JWT authentication to ensure data integrity and user privacy. Sight also uses Redux and Axios for state handling and API calls.",
       "roles": [
         {
           "title": "Full-Stack Developer"

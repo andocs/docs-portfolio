@@ -629,6 +629,168 @@
           "alt": "Traverse Mobile App"
         }
       ]
-    }    
+    },
+    {
+      "id": 11,
+      "page": "trmsweb",
+      "name": "TRMS Web",
+      "description": "Pasig TRMS is a Traffic Regulation Management System where I contributed as a Full-Stack Developer. I developed backend services using PHP and implemented RESTful APIs to efficiently store and retrieve transport-related data, such as routes, terminals, drivers, and vehicles. On the frontend, I completed missing pages and integrated new UI components to align with the updated backend logic, ensuring seamless user interactions and system functionality",
+      "roles": [
+        {
+          "title": "Full-Stack Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaHtml5", "name": "HTML5" },
+        { "icon": "FaCss3Alt", "name": "CSS3" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "FaPhp", "name": "PHP" },
+        { "icon": "SiMysql", "name": "MySQL" }
+      ],
+      "duration": "July 2024 - September 2024",
+      "site": {
+        "has_site": true,
+        "link": "https://pasigtrms.great-site.net/"
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/andocs/pasigtrms"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/proto/WkzC3xeQORbiB6KVT6Bdpq/TRMS?node-id=0-1&t=GUGc6xxmpwsBlYSk-1"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/trmsweb/trmsweb-1.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-featured.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-2.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-3.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-4.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-5.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-6.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-7.png",
+          "alt": "Pasig TRMS Web App"
+        },
+        {
+          "src": "/images/trmsweb/trmsweb-8.png",
+          "alt": "Pasig TRMS Web App"
+        }        
+      ]
+    },
+    {
+      "id": 10,
+      "page": "trmsmobile",
+      "name": "TRMS Mobile",
+      "description": "The mobile version of the TRMS (Traffic Regulation Management System) web app empowers users with essential tools for efficient transportation management. With the ability to scan and generate QR codes, users can effortlessly access route information and terminal details on the go. The app is integrated with the Google Maps Directions API which identifies the quickest redirection routes, ensuring drivers reach their destinations swiftly during road closures, events, and the like.",
+      "roles": [
+        {
+          "title": "Designer"
+        },
+        {
+          "title": "Mobile Developer"
+        }
+      ],
+      "tech_stack": [
+        { "icon": "FaFigma", "name": "Figma" },
+        { "icon": "FaJs", "name": "JavaScript" },
+        { "icon": "TbBrandReactNative", "name": "React Native" }
+      ],
+      "duration": "July 2024 - September 2024",
+      "site": {
+        "has_site": false,
+        "link": null
+      },
+      "github_repo": {
+        "has_repo": true,
+        "link": "https://github.com/andocs/PasigTRMSMobileApp"
+      },
+      "figma_uizard": {
+        "has_project": true,
+        "link": "https://www.figma.com/proto/Kj0qVip6H8VYWgSA8Jo6Wh/Pasig-TRMS-Mobile-App?node-id=14-3143&t=hCxqWDLj2Ze0GRjy-1"
+      },
+      "paper": {
+        "has_paper": false,
+        "link": null
+      },
+      "isMobile": true,
+      "status": "Completed",
+      "images": [
+        {
+          "src": "/images/trmsmobile/trmsmobile-featured.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-1.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-2.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-3.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-4.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-5.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-6.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-7.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-8.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-9.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-10.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        },
+        {
+          "src": "/images/trmsmobile/trmsmobile-11.jpg",
+          "alt": "Pasig TRMS Mobile App"
+        }
+      ]
+    }  
   ]
 }
